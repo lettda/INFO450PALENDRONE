@@ -18,13 +18,19 @@ int main() {
 
     char input[100];
 
-
     cout<<"Please enter a string"<<endl;
     cin.getline(input, 100);
     cout<<"You entered "<<input<<endl;
 
     reverseString(input);
-    cout<<"The reverse is "<<reversedInput<<endl;
+    
+    int result = strcmp(input, reversedInput);
+    
+    if (result == 0) {
+        cout<<"True"<<endl;
+    } else {
+        cout<<"False"<<endl;
+    }
 
     system("pause");
     return 0;
